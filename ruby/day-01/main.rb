@@ -36,19 +36,19 @@ end
 
 RSpec.describe 'Sonar' do
 
-  let(:puzzle) { Aoc::Puzzle.new }
+  let(:puzzle) { Aoc::Puzzle.sample }
 
   it '#two_measure_diff_count' do
-    expect(Aoc::Submarine::Sonar.two_measure_diff_count(puzzle.sample)).to be(7)
+    expect(Aoc::Submarine::Sonar.two_measure_diff_count(puzzle)).to be(7)
   end
 
   it '#three_measure_diff_count' do
-    expect(Aoc::Submarine::Sonar.three_measure_diff_count(puzzle.sample)).to be(5)
+    expect(Aoc::Submarine::Sonar.three_measure_diff_count(puzzle)).to be(5)
   end
 
 end
 
-puzzle = Aoc::Puzzle.new
+puzzle = Aoc::Puzzle.input
 
-p Aoc::Submarine::Sonar.two_measure_diff_count(puzzle.input)
-p Aoc::Submarine::Sonar.three_measure_diff_count(puzzle.input)
+p Aoc::Submarine::Sonar.two_measure_diff_count(puzzle)
+p Aoc::Submarine::Sonar.three_measure_diff_count(puzzle)
